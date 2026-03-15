@@ -134,7 +134,7 @@ def evaluate_fold(y_true: np.ndarray, p: np.ndarray) -> dict:
     }
 
 
-def run_hybrid_cv(cfg: HybridConfig) -> None:
+def run_hybrid_cv(cfg: HybridConfig):
     X, y = load_ds1_pair_data(cfg.data_dir)
     cv = StratifiedKFold(n_splits=cfg.n_splits, shuffle=True, random_state=cfg.random_state)
 
@@ -194,6 +194,8 @@ def run_hybrid_cv(cfg: HybridConfig) -> None:
     print("\n=== Hybrid CV Mean Metrics ===")
     for k, v in mean_metrics.items():
         print(f"{k:>10}: {v:.4f}")
+
+    return {"folds": scores, "mean": mean_metrics}
 
 
 def parse_args() -> HybridConfig:

@@ -6,6 +6,9 @@ __pycache__/
 .venv/
 .venv_win/
 venv/
+runs/
+.streamlit/
+*.jsonl
 
 # Data files
 data/*.csv
