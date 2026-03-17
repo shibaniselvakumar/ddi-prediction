@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap');
+
+:root {
+  /* Surface */
+  --bg-base:    #070b14;
+  --bg-raised:  #0d1424;
+  --bg-surface: #111c30;
+  --bg-overlay: #162038;
+
+  /* Borders */
+  --border-subtle:  rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.10);
+  --border-strong:  rgba(255, 255, 255, 0.18);
+
+  /* Brand accents */
+  --cyan:   #00d4ff;
+  --amber:  #f5a623;
+  --red:    #ff4d4d;
+  --green:  #00e5b0;
+
+  /* Text */
+  --text-primary:   #e2e8f4;
+  --text-secondary: #8a9cc0;
+  --text-muted:     #4a5a7a;
+
+  /* Typography */
+  --font-mono: 'Space Mono', monospace;
+  --font-sans: 'Syne', sans-serif;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* Shadows */
+  --shadow-glow-cyan:  0 0 24px rgba(0, 212, 255, 0.2);
+  --shadow-glow-amber: 0 0 24px rgba(245, 166, 35, 0.2);
+}

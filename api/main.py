@@ -82,7 +82,7 @@ def get_drugs():
 
 
 @app.get("/dataset/pairs")
-def get_pairs(sample: int = Query(100, ge=10, le=1000)):
+def get_pairs(sample: Optional[int] = Query(None, ge=1)):
     return dataset_pairs(sample=sample)
 
 

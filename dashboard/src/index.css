@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --health-bg: #f4f8ff;
+  --health-bg-soft: #eef4ff;
+  --health-panel: #ffffff;
+  --health-border: #dbe7ff;
+  --health-primary: #1d4ed8;
+  --health-primary-dark: #1e3a8a;
+  --health-accent: #0891b2;
+  --health-text: #0f172a;
+  --health-muted: #64748b;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at 10% 10%, rgba(29, 78, 216, 0.09), transparent 33%),
+    radial-gradient(circle at 90% 0%, rgba(8, 145, 178, 0.1), transparent 36%),
+    var(--health-bg);
+  color: var(--health-text);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.health-shell {
+  background-image: linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.health-panel {
+  background: var(--health-panel);
+  border: 1px solid var(--health-border);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+  padding: 1.25rem;
+}
+
+.health-hero {
+  border: 1px solid var(--health-border);
+  border-radius: 20px;
+  background: linear-gradient(130deg, #ffffff, #eef5ff 65%, #ecfeff 100%);
+  padding: 1.25rem;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.health-sidebar {
+  position: sticky;
+  top: 1.2rem;
+  height: fit-content;
+  width: 280px;
+  border-radius: 22px;
+  border: 1px solid var(--health-border);
+  background: linear-gradient(180deg, #ffffff, #f6faff);
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.1);
+  padding: 1rem;
+}
+
+.health-brand {
+  border: 1px solid #c7dbff;
+  border-radius: 16px;
+  background: #eff6ff;
+  padding: 0.8rem;
+}
+
+.health-title {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.health-subtitle {
+  margin-top: 0.2rem;
+  color: var(--health-muted);
+  font-size: 12px;
+}
+
+.health-overline {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.health-nav-btn {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #1e293b;
+  padding: 0.6rem 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.health-nav-btn:hover {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+}
+
+.health-nav-btn-active {
+  border-color: #bfdbfe;
+  background: linear-gradient(90deg, #dbeafe, #ecfeff);
+  color: #0f172a;
+}
+
+.health-dot {
+  height: 7px;
+  width: 7px;
+  border-radius: 999px;
+  background: var(--health-primary);
+}
+
+.health-sidebar-footer {
+  margin-top: 1rem;
+  border-radius: 14px;
+  border: 1px solid #dbeafe;
+  background: #f8fbff;
+  padding: 0.75rem;
+  font-size: 12px;
+  color: #475569;
+}
+
+.health-chip {
+  border: 1px solid #bfdbfe;
+  background: white;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.health-primary-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 0.6rem 0.95rem;
+  background: linear-gradient(90deg, var(--health-primary-dark), var(--health-primary));
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(29, 78, 216, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.health-primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(29, 78, 216, 0.35);
+}
+
+.health-input {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 0.62rem 0.75rem;
+  font-size: 14px;
+}
+
+.health-input:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.health-stat-card {
+  border: 1px solid var(--health-border);
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 8px 26px rgba(15, 23, 42, 0.06);
+}
+
+.glass {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 18px;
+  padding: 1px;
+  background: linear-gradient(120deg, #2563eb, #10b981, #60a5fa);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.risk-gauge {
+  position: relative;
+  height: 16px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #10b981, #f59e0b 50%, #ef4444);
+}
+
+.risk-marker {
+  position: absolute;
+  top: -5px;
+  height: 26px;
+  width: 2px;
+  border-radius: 2px;
+  background: #0f172a;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
+}
+
+.health-table thead {
+  background: #eff6ff;
+  color: #334155;
+}
+
+.health-table th,
+.health-table td {
+  padding: 0.62rem 0.78rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.health-table tbody tr:hover {
+  background: #f8fbff;
+}

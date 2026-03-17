@@ -1,0 +1,117 @@
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.statBox {
+  background: var(--bg-raised);
+  border: 1px solid var(--border-default);
+  border-left: 3px solid var(--accent, var(--cyan));
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+}
+
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.statValue {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ── Controls ── */
+.tableControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.searchInput {
+  max-width: 220px;
+}
+
+.rowCount {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ── Table ── */
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.table thead tr {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.table th {
+  padding: 10px 18px;
+  text-align: left;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 0.12s;
+}
+
+.table tbody tr:hover { background: var(--bg-surface); }
+.table tbody tr:last-child { border-bottom: none; }
+
+.table td {
+  padding: 11px 18px;
+  color: var(--text-primary);
+}
+
+.drugA {
+  color: var(--cyan) !important;
+  font-weight: 700;
+}
+
+.drugB { color: var(--text-secondary) !important; }
+
+.avgPrr { color: var(--text-muted) !important; }
+
+.prrPill {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 4px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  color: var(--cyan);
+  font-size: 11px;
+}
+
+@media (max-width: 768px) {
+  .statsRow { grid-template-columns: 1fr 1fr; }
+  .tableControls { flex-wrap: wrap; }
+  .searchInput { max-width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .statsRow { grid-template-columns: 1fr; }
+}

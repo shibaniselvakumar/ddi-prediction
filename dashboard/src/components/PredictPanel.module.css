@@ -1,0 +1,122 @@
+.selectors {
+  display: grid;
+  grid-template-columns: 1fr 48px 1fr;
+  gap: 12px;
+  align-items: flex-end;
+  margin-bottom: 4px;
+}
+
+.selectorGroup { display: flex; flex-direction: column; gap: 6px; }
+
+.selectorLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.vsBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--amber);
+  background: rgba(245, 166, 35, 0.1);
+  border: 1px solid rgba(245, 166, 35, 0.28);
+  border-radius: var(--radius-sm);
+  height: 40px;
+  align-self: flex-end;
+}
+
+/* ── Gauge ── */
+.gaugeSection { margin-top: 22px; }
+
+.gaugeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.gaugeLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.gaugeValue {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.gaugeTrack {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--green) 0%, var(--amber) 50%, var(--red) 100%);
+  box-shadow: 0 0 18px rgba(0, 229, 176, 0.1);
+}
+
+.gaugeThumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--bg-base);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.6);
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gaugeMarks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+}
+
+/* ── Summary ── */
+.summary {
+  margin-top: 18px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.06) 0%, rgba(0, 229, 176, 0.04) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.18);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+}
+
+.summaryEyebrow {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 8px;
+}
+
+.summaryText {
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+.summaryText strong {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .selectors { grid-template-columns: 1fr; }
+  .vsBadge { display: none; }
+}
